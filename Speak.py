@@ -87,4 +87,4 @@ def time():
     else:
         speak2("Good Night")
 
-time()
+# time()

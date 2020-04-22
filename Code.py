@@ -117,59 +117,20 @@ def chrome():
 
 def web_steam():
     akun = input("Account : ")
-    bot = webdriver.Chrome("C:\\Users\Dimas Okva\\Downloads\\Chrome WebDriver\\chromedriver.exe")
+    path = str(input("Path WebDriver: "))
+    bot = webdriver.Chrome(path)
     bot.get("https://store.steampowered.com/")
     bot.maximize_window()
     login_link = bot.find_element_by_class_name("global_action_link").click()
-    nick = bot.find_element_by_name("username")
-    pas = bot.find_element_by_name("password")
+    nick = input(bot.find_element_by_name("username"))
+    pas = input(bot.find_element_by_name("password"))
     nick.clear()
     pas.clear()
 
-    if akun == "1":
-        nick.send_keys("blackmanxiii")
-        pas.send_keys("81011002betamantap")
-    elif akun == "2":
-        nick.send_keys("dimas_okva18102001")
-        pas.send_keys("81011002betamantap")
-    else:
-        nick.send_keys("dimas_okva5458")
-        pas.send_keys("81011002Beta")
+    nick.send_keys(nick)
+    pas.send_keys(pas)
 
     pas.send_keys(Keys.RETURN)
-
-# def mail():
-#     akun = input("Account : ")
-#
-#     if akun == "1":
-#         sender_email = "dimasokva@gmail.com"
-#         password = "81011002betamantap"
-#     else:
-#         sender_email = "okvadimas@gmail.com"
-#         password = "81011002betamantap"
-#     subject = input("Input Subjek Email: ")
-#     body = input("Input Message: ")
-#
-#     msg = f"Subject: {subject} \n\n {body}"
-#
-#     # filename = "amoled.png"
-#     # attachment = open(filename, "rb")
-#     #
-#     # part = MIMEBase("application", "octet-stream")
-#     # part.set_payload((attachment).read())
-#     # encoders.encode_base64(part)
-#     # part.add_header("Content-Disposition", "attachment; filename= " + filename)
-#     # msg = MIMEMultipart()
-#     # msg.attach(part)
-#
-#     context = ssl.create_default_context()
-#     with smtplib.SMTP("smtp.gmail.com", 587) as server:
-#         server.ehlo()  # Can be omitted
-#         server.starttls(context=context)
-#         server.ehlo()  # Can be omitted
-#         server.login(sender_email, password)
-#         server.sendmail(sender_email, receiver_email, msg)
-#         print("Successfully Sent an Email")
 
 def cuaca():
     lokasi = input("Location : ").lower()

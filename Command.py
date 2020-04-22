@@ -22,18 +22,20 @@ from random import choice
 def intro():
     global name
     global master
-    # speak2("Let me introduce myself, My name is haico, I'm a software assistant, like the basic purpose of the machine, I'm here to help with your work, tell me what is your name ?")
-    # master = input("Name : ")
-    # sleep(2)
-    # speak2(f"Nice to meet you, {master}")
+
+    name = "Haico"
+    speak2("Let me introduce myself, My name is haico, I'm a software assistant, like the basic purpose of the machine, I'm here to help with your work, tell me what is your name ?")
+    master = input("Name : ")
+    sleep(2)
+    speak2(f"Nice to meet you, {master}")
+    
+    # if u want to give nickname yourself 
     # speak2("would you like to give me a nickname for the next time ?")
     # name = input("Nick Name : ")
     # sleep(2)
     # respon = [f"{name} ??..., yeahh, thats a good idea", f"{name} ??....., i think its sounds great", f"{name} ??...,sure, its sounds great"]
     # speak2(choice(respon))
 
-    name = "Haico"
-    master = "Dimas"
 
 def action():
     command = input(f"{master} : ").lower()

@@ -1,6 +1,7 @@
 import speech_recognition as sr
 from Speak import speak2
 from time import sleep
+from Speak import time
 import sys
 from Code import *
 from random import choice
@@ -24,6 +25,7 @@ def intro():
     global master
 
     name = "Haico"
+    time()
     speak2("Let me introduce myself, My name is haico, I'm a software assistant, like the basic purpose of the machine, I'm here to help with your work, tell me what is your name ?")
     master = input("Name : ")
     sleep(2)
